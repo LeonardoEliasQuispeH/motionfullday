@@ -1,0 +1,152 @@
+body {
+    font-family: 'Sequel100Black-95', sans-serif;
+    background-color: #0000ff;
+    /*PARA EL CAMBIO DE COLOR*/
+    transition: background-color 2s ease; /* Establece la transición para el cambio de color del fondo */
+
+}
+
+/* Cargar la fuente "Sequel100Black-95" en formato TTF */
+@font-face {
+    font-family: 'Sequel100Black-95';
+    src: url('Sequel100Black-95.ttf') format('truetype'); /* Ajusta la ruta y el formato según la ubicación y el tipo de archivo de tu fuente TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* COLOR DEL CONTADOR*/
+#contador-tiempo {
+    color: white;
+    font-size: 40px;
+    text-align: center; /* Centra el texto horizontalmente */
+    position: fixed; /* Fija la posición del div */
+    bottom: 0; /* Coloca el div en la parte inferior de la ventana */
+    left: 50%; /* Centra el div horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar correctamente */
+    z-index: 999; 
+    bottom: 20px;
+}
+/*-------------------*/
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.centro-pantalla {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Un valor alto para asegurarse de que esté por encima de otros elementos */
+}
+
+/* Estilos de la imagen centrada */
+.centro-pantalla img {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    transform: scale(1); /* Estado normal de la imagen (zoom 100%) */
+    transition: transform 1.5s ease-in-out; /* Transición suave para la propiedad transform durante 2 segundos */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse sobre la imagen */
+    z-index: 1000; /* Un valor alto para asegurarse de que esté por encima de otros elementos */
+}
+
+/* Al pasar el mouse sobre la imagen, aplicar el zoom */
+.centro-pantalla img:hover {
+    transform: scale(1.2); /* Zoom al 120% */
+}
+
+.oculto {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.mostrar {
+    opacity: 1;
+}
+
+/*CONTENEDOR SUPERIOR DERECHO*/
+#imagen-superior-derecho {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    right: 10px; /* Ajusta la distancia desde la parte derecha según sea necesario */
+    z-index: 999; /* Ajusta el valor del índice Z según sea necesario para colocarla sobre otros elementos */
+}
+#imagen-superior-derecho-img {
+    width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+/*CONTENEDOR INFERIOR DERECHO*/
+#imagen-inferior-derecho {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    right: 10px; /* Ajusta la distancia desde la parte derecha según sea necesario */
+    z-index: 999; /* Ajusta el valor del índice Z según sea necesario para colocarla sobre otros elementos */
+}
+#imagen-inferior-derecho-img {
+    width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+/*CONTENEDOR INFERIOR IZQUIERDO*/
+#imagen-inferior-izquierdo {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 10px; /* Ajusta la distancia desde la parte derecha según sea necesario */
+    z-index: 999; /* Ajusta el valor del índice Z según sea necesario para colocarla sobre otros elementos */
+}
+#imagen-inferior-izquierdo-img {
+    width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+
+/*ACCION PARA MOVILES*/
+@media (max-width: 800px) {
+    #imagen-superior-izquierdo-img {
+        width: 50%; /* Ajusta el ancho según tus necesidades para pantallas más pequeñas */
+        height: auto;
+    }
+
+    /*CONTENEDOR SUPERIOR DERECHO*/
+    #imagen-superior-derecho {
+        text-align: right; /* Alinea el contenido a la izquierda */
+    }
+    #imagen-superior-derecho-img {
+        width: 50%; /* Ajusta el ancho según tus necesidades para pantallas más pequeñas */
+        height: auto;
+    }
+
+    /*CONTENEDOR INFERIOR DERECHO*/
+    #imagen-inferior-derecho {
+        text-align: right; /* Alinea el contenido a la izquierda */
+    }
+    #imagen-inferior-derecho-img {
+        width: 50%; /* Ajusta el ancho según tus necesidades para pantallas más pequeñas */
+        height: auto;
+    }
+
+    /*CONTENEDOR INFERIOR IZQUIERDO*/
+    #imagen-inferior-izquierdo-img {
+        width: 50%; /* Ajusta el ancho según tus necesidades para pantallas más pequeñas */
+        height: auto;
+    }
+
+    /*CONTADOR*/
+    #contador-tiempo {
+        color: white;
+        font-size: 16px;
+        text-align: center; /* Centra el texto horizontalmente */
+        position: fixed; /* Fija la posición del div */
+        bottom: 0; /* Coloca el div en la parte inferior de la ventana */
+        left: 50%; /* Centra el div horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centrar correctamente */
+        z-index: 999; 
+        bottom: 20px;
+    }
+    /*-------------------*/
+}
